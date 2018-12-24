@@ -1,0 +1,74 @@
+#header.full-header #logo, #header.full-header #primary-menu > ul {
+	border-right: 0;
+}
+#header.full-header .container, #header-wrap {
+    background: #8E1E26;
+}
+#primary-menu ul li > a {
+	color: #fff;
+}
+#primary-menu ul li:hover > a, #primary-menu ul li.current > a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a {
+    color: #FF8C42 !important;
+}
+#footer.dark, .dark #footer {
+    background-color: #342E37;
+}
+.feature-box.fbox-dark .fbox-icon i, .feature-box.fbox-dark .fbox-icon img {
+    background-color: #8E1E26;
+}
+.fbox-effect.fbox-dark .fbox-icon i:hover, .fbox-effect.fbox-dark:hover .fbox-icon i {
+    background-color: #FF8C42;
+}
+.feature-box.fbox-outline .fbox-icon {
+	border: 1px solid #FF8C42;
+}
+.fbox-effect.fbox-dark .fbox-icon i:after {
+    box-shadow: 0 0 0 2px #FF8C42;
+}
+.sidenav > .ui-tabs-active > a, .sidenav > .ui-tabs-active > a:hover {
+    background-color: #8E1E26 !important;
+}
+#gotoTop:hover {
+    background-color: #8E1E26;
+}
+.button-dark {
+	background-color: #8E1E26;
+}
+.button.button-dark:hover {
+	background-color: #FF8C42;
+}
+.btn-success {
+	background-color: #8E1E26;
+	border-color: #8E1E26;
+}
+.btn-success:hover {
+    background-color: #FF8C42;
+    border-color: #FF8C42;
+}
+::selection {
+	background: #FF8C42 !important;
+}
+.icon-reorder:before, .breadcrumb a:hover, 
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a 
+{
+	color: #FF8C42 !important;
+}
+.top-links li:hover { background-color: transparent; }
+#primary-menu ul ul.menu-pos-invert:not(.mega-menu-column) {
+	margin-top: 20px;
+}
+.sticky-header .top-links ul {
+	margin-top: 0 !important;
+}
+.sticky-header .top-links > ul > li > a {
+	padding-top: 19px !important;
+}
+#primary-menu ul ul:not(.mega-menu-column) {
+	border-top-color: #FF8C42;
+}
+.fancy-title.title-bottom-border h4 {
+	border-color: #8E1E26;
+}
+h4 > span:not(.nocolor):not(.badge) {
+	color: #8E1E26;
+}
