@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css); 
+body, #primary-menu ul li > a, label, h1, h2, h3, h4, h5, h6, small {
+    letter-spacing: 0 !important;
+    font-family: 'Droid Arabic Kufi' !important;
+}
+
+#header.full-header #logo, #header.full-header #primary-menu > ul {
+    border-right: 0;
+    border-left: 0;
+}
+
+#copyrights .col_half.tright {
+    text-align: left !important;
+    direction: ltr;
+}
+
+.sidenav li i.float-left {
+    margin-left: 0;
+}
+
+.datepicker table tr td span {
+    float: right !important;
+}
