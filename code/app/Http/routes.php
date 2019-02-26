@@ -137,8 +137,13 @@ Route::get('setlocale/{locale}', function ($locale) {
 
 Route::post('application/step3/{id}', 'ApplicationController@step3');
 Route::get('application/step3/{id}', 'ApplicationController@step3');
+Route::get('application/pay/{id}', 'ApplicationController@pay');
+Route::get('application/pay_response', 'ApplicationController@pay_response');
+Route::get('application/track', 'ApplicationController@track');
+Route::post('application/track', 'ApplicationController@track');
 Route::post('application/step2', 'ApplicationController@step2');
 Route::get('pages/{type}', 'PageController@show');
+Route::get('faqs', 'FaqController@index');
 Route::auth();
 Route::get('/', 'HomeController@index');
 

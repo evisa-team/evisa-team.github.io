@@ -47,12 +47,12 @@
                         ============================================= -->
                         <nav id="primary-menu">
                             <ul>
-                                <li class="current"><a href="{{ url('/') }}"><div>{{ trans('website.home') }}</div></a></li>
-                                <li><a href="{{ url('pages/about_us') }}"><div>{{ trans('website.about_us') }}</div></a></li>
-                                <li><a href="#"><div>{{ trans('website.track_application') }}</div></a></li>
+                                <li {!! Request::is('/') ? 'class="current"' : '' !!}><a href="{{ url('/') }}"><div>{{ trans('website.home') }}</div></a></li>
+                                <li {!! Request::is('pages/about_us') ? 'class="current"' : '' !!}><a href="{{ url('pages/about_us') }}"><div>{{ trans('website.about_us') }}</div></a></li>
+                                <li {!! Request::is('application/track') ? 'class="current"' : '' !!}><a href="{{ url('application/track') }}"><div>{{ trans('website.track_application') }}</div></a></li>
                                 <li><a href="#"><div>{{ trans('website.pay_now') }}</div></a></li>
                                 <li><a href="#"><div>{{ trans('website.contact') }}</div></a></li>
-                                <li><a href="#"><div>{{ trans('website.faq') }}</div></a></li>
+                                <li {!! Request::is('faqs') ? 'class="current"' : '' !!}><a href="{{ url('faqs') }}"><div>{{ trans('website.faq') }}</div></a></li>
                             </ul>
                             <div class="top-links">
                                 <ul class="sf-js-enabled clearfix" style="touch-action: pan-y;">
@@ -85,7 +85,7 @@
                     <!-- Footer Widgets
                     ============================================= -->
                     <div class="footer-widgets-wrap clearfix">
-                        <div class="col_one_third">
+                        <div class="col_one_fourth">
                             <div class="widget clearfix">
                                 <img src="{{ url('site_assets') }}/images/footer-widget-logo.png" alt="" class="footer-logo" width="50%">
                                 <div style="background: url('{{ url("site_assets") }}/images/world-map.png') no-repeat center center; background-size: 100%;">
@@ -100,23 +100,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col_one_third">
+                        <div class="col_one_fourth">
                             <div class="widget widget_links clearfix">
                                 <h4>{{ trans('website.links') }}</h4>
                                 <ul>
                                     <li><a href="{{ url('/') }}">{{ trans('website.home') }}</a></li>
                                     <li><a href="{{ url('pages/about_us') }}">{{ trans('website.about_us') }}</a></li>
-                                    <li><a href="#">{{ trans('website.track_application') }}</a></li>
-                                    <li><a href="#">{{ trans('website.holidays') }}</a></li>
-                                    <li><a href="#">{{ trans('website.pay_now') }}</a></li>
-                                    <li><a href="#">{{ trans('website.contact') }}</a></li>
-                                    <li><a href="#">{{ trans('website.terms_and_conditions') }}</a></li>
-                                    <li><a href="#">{{ trans('website.privacy_statement') }}</a></li>
+                                    <li><a href="{{ url('application/track') }}">{{ trans('website.track_application') }}</a></li>
+                                    <li><a href="{{ url('pages/holidays') }}">{{ trans('website.holidays') }}</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col_one_third col_last">
-                            <div class="widget subscribe-widget clearfix">
+                        <div class="col_one_fourth">
+                            <div class="widget widget_links clearfix">
+                                <h4>&nbsp;</h4>
+                                <ul>
+                                    <li><a href="#">{{ trans('website.pay_now') }}</a></li>
+                                    <li><a href="#">{{ trans('website.contact') }}</a></li>
+                                    <li><a href="{{ url('pages/terms_conditions') }}">{{ trans('website.terms_and_conditions') }}</a></li>
+                                    <li><a href="{{ url('pages/privacy_statement') }}">{{ trans('website.privacy_statement') }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_one_fourth col_last">
+                            {{-- <div class="widget subscribe-widget clearfix">
                                 <h5><strong>{{ trans('website.subscribe') }}</strong> {{ trans('website.subscribe_text') }}:</h5>
                                 <div class="widget-subscribe-form-result"></div>
                                 <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
@@ -130,17 +137,18 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div> --}}
                             <div class="widget clearfix" style="margin-bottom: -20px;">
+                                <h4>{{ trans('website.follow_us') }}</h4>
                                 <div class="row">
-                                    <div class="col-lg-6 clearfix bottommargin-sm">
+                                    <div class="col-lg-12 clearfix bottommargin-sm">
                                         <a href="{{ $config->facebook_url }}" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
                                             <i class="icon-facebook"></i>
                                             <i class="icon-facebook"></i>
                                         </a>
                                         <a href="{{ $config->facebook_url }}"><small style="display: block; margin-top: 3px;"><strong>{{ trans('website.like_us') }}</strong><br>on Facebook</small></a>
                                     </div>
-                                    <div class="col-lg-6 clearfix">
+                                    <div class="col-lg-12 clearfix">
                                         <a href="{{ $config->twitter_url }}" class="social-icon si-dark si-colored si-twitter nobottommargin" style="margin-right: 10px;">
                                             <i class="icon-twitter"></i>
                                             <i class="icon-twitter"></i>

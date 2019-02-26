@@ -34,6 +34,11 @@ class Application extends Model
     public $religionValues = ['Unknown', 'ISLAM', 'CHRISTIAN', 'HINDU', 'BUDDHISM', 'SIKH', 'KAD IANI', 'BAHAI', 'JUDAISM', 'ZOROASTRIAN'];
     public $maritalValues = ['Single', 'Married', 'Divorced', 'Widow', 'Deceased', 'Unspecific', 'Child'];
 
+    public function visaType()
+    {
+        return $this->belongsTo('App\Models\Admin\VisaType');
+    }
+
     public function residenceCountry()
     {
         return $this->belongsTo('App\Models\Admin\Country', 'residence_country');

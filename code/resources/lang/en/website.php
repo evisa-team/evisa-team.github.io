@@ -54,6 +54,7 @@ return [
     /***************   Step 2  ****************************/
     'apply_now' => 'Apply now',
     'cancel' => 'Cancel',
+    'required_documents' => 'Required documents',
 
     /***************   Step 3  ****************************/
     'full_name' => 'Full Name',
@@ -107,4 +108,29 @@ return [
     'travel_date' => 'Travel Date',
     'living_in' => 'Living in',
     'nationality' => 'Nationality',
+
+    'payment_result' => 'Payment result',
+    'payment_err_msg' => 'Sorry, the payment process was failed, please try again later',
+    'payment_success_msg' => 'Thank you, the payment process has been completed successfully',
+
+    /***************   Track  ****************************/
+    'reference_number' => 'Reference Number',
+    'track' => 'Track',
+    'applicant_name' => 'Applicant Name',
+    'applied_on' => 'Applied On',
+    'service_applied_for' => 'Service Applied for',
+    'order_comments' => 'Order Comments',
+    'payment_status' => 'Payment Status',
+    'visa_details' => 'Visa Details',
+    'application_status' => 'Application Status',
+    'status' => [
+        'New',
+        'Approved',
+        'Rejected',
+        'Completed',
+        'Delivered'
+    ],
+    'error' => 'Error',
+    'track_error' => 'Invalid reference number',
+    'track_page_desc' => 'You just have to fill your visa application reference number below to get your visa status',
 ];

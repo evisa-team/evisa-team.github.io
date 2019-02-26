@@ -15,7 +15,9 @@
 <!-- Content
 ============================================= -->
 <section id="content">
-    {!! $page->content !!}
+    <div class="container topmargin bottommargin">
+        {!! $page->content !!}
+    </div>
 </section>
 
 @endsection

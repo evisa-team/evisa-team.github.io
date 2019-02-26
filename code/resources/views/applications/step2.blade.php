@@ -18,6 +18,13 @@
                                 @endif
                             @endforeach
                         </ul>
+
+                        <div class="card">
+                            <div class="card-header"><strong>{{ trans('website.required_documents') }}</strong></div>
+                            <div class="card-body">
+                                {!! $requiredDocuments->content !!}
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col_two_third col_last nobottommargin">
@@ -96,4 +103,10 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ url('site_assets') }}/css/components/datepicker.css" type="text/css" />
+<style>
+    .card-header {
+        background-color: #8E1E26;
+        color: #fff;
+    }
+</style>
 @endsection
